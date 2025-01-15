@@ -4,70 +4,120 @@
     margin: 0;
 }
 
-.header{
-    font-size: larger;
-    color: blanchedalmond;
-    height: 100px;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-   justify-content: space-around;
+
+body{
+    height: 100vh;
+    background-image:none ;
+    position: relative;
    
+}
+
+body::before {
+    content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/back.jpg');
+  filter: blur(8px); /* Blur applied only to the background image */
+  z-index: -1; /* Ensure the pseudo-element stays behind the content */
+}
+
+#whole{
+ display: flex;
+    color: white;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.middle{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   left: 60vh;
+    justify-content: center;
+    align-items: flex-start;
+  
+ 
+ 
+}
+
+.middle h1{
+    font-size: 80px;
+   
+ 
+}
+
+.middle a{
+    color: aliceblue;
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    margin-top: 10px;
+    font-size: larger;
+  
+}
+
+.middle p{
+    font-size: larger;
+    font-weight: bolder;
+
+}
+
+.POW{
+    color: aliceblue;
+  
 }
 
 li{
     list-style: none;
 }
 
-@media (min-width: 320px) {
- .header{
-    background: rgb(248, 247, 247);
+
+.sideBar{
+    height: 100vh;
+    width: 50px;
+    position: fixed;
+    display: flex;
+  
+    flex-direction: column;
+    justify-content: space-between;
     color: black;
-    border-bottom: solid rgb(247, 242, 242) 1px;
-    justify-content: end;
-   
- }
+    padding: 20px;
+    box-shadow: 0 0 0 0.5px white;
+}
 
- li{
-    margin: 1rem;
-    font-size: x-large;
-    font-weight: bolder;
- }
+.top-bar { 
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-weight:bolder;
+    font-size: larger;
+    color: white;
  
- li:hover{
-    color: brown;
- }
+ 
 }
 
-@media (
-    max-width: 312px)
- {
-    .header{
-        height: 150px;
-        flex-direction: column;
-        font-size: bold;
-        color: white;
-        font-weight: bolder;
-    }
 
-    li{
-        border-bottom: 1px solid white;
-    }
-    
+
+.nav a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
 }
 
-@media (Max-width:480px) {
-    
-   
-    .header{
-        justify-content: center;
-    }
+.nav img{
+    width: 50px;
+    margin-bottom: 20px;
 }
 
-@media (min-with: 769px) {
-    .header{
-        justify-content: center;
-    }
-    
-}
+
+
+/* media query starts here */
+
